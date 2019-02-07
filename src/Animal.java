@@ -137,6 +137,15 @@ public class Animal
 
         // Cast object to Animal type to compare member variables:
         Animal otherAni = (Animal)other;
+        if(!otherAni.getColor().contentEquals(this.getColor()))
+        	return false;
+        if(!otherAni.getName().contentEquals(this.getName()))
+        	return false;
+        if(otherAni.getWeight() != this.getWeight())
+        	return false;
+        if(otherAni.getHeight() != this.getHeight())
+        	return false;
+        else return true;
 
         // Check that all fields match (color, name, weight, height):
         
