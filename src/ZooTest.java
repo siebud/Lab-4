@@ -24,8 +24,9 @@ public class ZooTest {
 	}
 		
 	public void toStringTest() throws AssertException {
-		try3.addAnimal(i);
-		 Assert.assertEquals("These animals live in the zoo: \nFrank, a blue-colored animal. 23.1 pounds, 11.9 inches\n", try3.toString());
+		Zoo try4 = new Zoo(2);
+		try4.addAnimal(i);
+		 Assert.assertEquals("These animals live in the zoo: \nFrank, a blue-colored animal. 23.1 pounds, 11.9 inches\n", try4.toString());
 	}
 		
 	

@@ -32,5 +32,24 @@ public class AnimalTest
         Assert.assertEquals(10.5, animal1.getWeight(), 0.01);
         Assert.assertEquals(2.1, animal1.getHeight(), 0.01);
     }
+    
+    public void toStringTest() throws AssertException {
+    	Animal animal1 = new Animal("blue", "leo", 10.5,2.1);
+    	Assert.assertEquals("leo, a blue-colored animal. 10.5 pounds, 2.1 inches\n", animal1.toString());
+    }
+    
+    public void equalsTestNot() throws AssertException {
+    	Animal animal1 = new Animal("blue", "leo", 10.5,2.1);
+    	Animal animal2 = new Animal("green", "hamlet", 5.3, 20.0);
+    	
+    	Assert.assertEquals(false, animal1.equals(animal2));
+    }
+    
+    public void equalsTest() throws AssertException {
+    	Animal animal1 = new Animal("blue", "leo", 10.5,2.1);
+    	Animal animal3 = new Animal("blue", "leo", 10.5,2.1); 
+    	
+    	Assert.assertEquals(true, animal1.equals(animal3));
+    }
 }
 
